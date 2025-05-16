@@ -1,0 +1,98 @@
+/* Common Styles */
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  /* Sign Up Form Styles */
+  .login-container {
+      
+    display: flex;
+    width: 100%;
+    min-height: 80vh;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+  }
+  
+  .signup-box {
+    background: white;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .illustration {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+  }
+  
+  .title {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+    position: relative;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.2s;
+  }
+  
+  .form-control:focus {
+    border-color: rgb(82, 115, 247);
+    outline: none;
+  }
+  
+  .form-group label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 0 5px;
+    color: #666;
+    transition: all 0.2s;
+    pointer-events: none;
+  }
+  
+  .form-control:focus + label,
+  .form-control:not(:placeholder-shown) + label {
+    top: 0;
+    font-size: 14px;
+    color: rgb(82, 115, 247);
+  }
+  
+
+  
+  .login-button {
+    background-color:rgb(82, 115, 247);
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+    font-weight: 500;
+  }
+  
+  .login-button:hover {
+    background-color:rgb(102, 123, 209);
+  }
+  

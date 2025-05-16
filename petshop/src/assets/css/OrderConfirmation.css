@@ -1,0 +1,109 @@
+
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Order Confirmation Page Styles */
+.order-confirm-bg {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f6f7fb;
+}
+.order-confirm-card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  max-width: 400px;
+  text-align: center;
+  animation: fadeInUp 1s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+}
+.order-confirm-icon {
+  display: block;
+  margin: 0 auto 18px auto;
+  animation: pop 0.7s cubic-bezier(0.51, 1.35, 0.61, 1.05);
+}
+.order-confirm-title {
+  color: #141414;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.order-confirm-info {
+  color: #414d55;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+.order-confirm-btn {
+  margin-top: 12px;
+  padding: 10px 28px;
+  background: #34d399;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(52,211,153,0.13);
+  transition: background 0.18s;
+}
+.order-confirm-btn:hover {
+  background: #22b87d;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes pop {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Checkmark SVG Animation */
+.order-confirm-animated-icon {
+  animation: pop 0.7s cubic-bezier(0.51, 1.35, 0.61, 1.05);
+}
+.order-confirm-animated-circle {
+  stroke-dasharray: 157;
+  stroke-dashoffset: 157;
+  animation: draw-circle 1s ease-out forwards;
+}
+.order-confirm-animated-check {
+  stroke-dasharray: 38;
+  stroke-dashoffset: 38;
+  animation: draw-check 0.55s 0.8s cubic-bezier(0.2, 2, 0.4, 1) forwards;
+}
+@keyframes draw-circle {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes draw-check {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

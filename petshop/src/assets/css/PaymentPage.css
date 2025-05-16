@@ -1,0 +1,74 @@
+
+  
+  .payment-card {
+    max-width: 420px;
+    margin: 60px auto;
+    background: white;
+    border-radius: 15px;
+    padding: 35px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 150px;
+
+  }
+  
+  .payment-card h2 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 22px;
+  }
+  
+  .payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .option-box {
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    font-size: 16px;
+    gap: 15px;
+  }
+  
+  .option-box input[type='radio'] {
+    display: none;
+  }
+  
+  .option-box .icon {
+    font-size: 20px;
+    color: #007bff;
+  }
+  
+  .option-box:hover {
+    background: #f0f8ff;
+    border-color: #007bff;
+  }
+  
+  .option-box.selected {
+    border-color: #007bff;
+    background: #e6f0ff;
+  }
+  
+  .pay-btn {
+    padding: 12px;
+    font-size: 16px;
+    background: linear-gradient(to right, #007bff, #0056d2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 15px;
+  }
+  
+  .pay-btn:hover {
+    background: linear-gradient(to right, #0056d2, #003f9a);
+  }
+  

@@ -1,0 +1,440 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #4f46e5;
+  --secondary: #64748b;
+  --success: #22c55e;
+  --danger: #ef4444;
+  --background: #f1f5f9;
+  --sidebar: #1e1b4b;
+  --text: #334155;
+  --border: #e2e8f0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+ 
+  color: var(--text);
+}
+
+/* Layout */
+.adashboard {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.asidebar {
+  background: var(--sidebar);
+  color: white;
+  padding: 1.5rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.asidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  color: #fff;
+}
+
+/* Admin Profile */
+.aadmin-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 0 -1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.aadmin-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(45deg, #4f46e5, #6366f1);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.aadmin-info {
+  flex: 1;
+}
+
+.aadmin-name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.aadmin-email {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 0.25rem;
+}
+
+.anav-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.anav-item {
+  margin-bottom: 0.5rem;
+}
+
+.anav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 0.875rem 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.anav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transform: translateX(4px);
+}
+
+.anav-link.active {
+  background: rgba(79, 70, 229, 0.2);
+  color: #fff;
+  border-left: 3px solid var(--primary);
+}
+
+/* Main content */
+.amain {
+  padding: 2rem;
+  background: var(--background);
+}
+
+.aheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.apage-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+/* Cards */
+.astats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.astat-card {
+  background: white;
+  padding: 1.75rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.astat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.astat-title {
+  color: var(--secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.astat-value {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+/* Table */
+.atable-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.adata-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.adata-table th,
+.adata-table td {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.adata-table th {
+  background: #f8fafc;
+  font-weight: 600;
+  color: #475569;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.adata-table tr:hover {
+  background: #f8fafc;
+}
+
+/* Forms */
+.aform-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.aform-group {
+  margin-bottom: 1.5rem;
+}
+
+.aform-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.aform-input,
+.aform-textarea,
+.aform-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background: #fff;
+}
+
+.aform-input:focus,
+.aform-textarea:focus,
+.aform-select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.aform-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.aform-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+/* Buttons */
+.abtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.abtn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.abtn-primary:hover {
+  background: #4338ca;
+  transform: translateY(-1px);
+}
+
+.abtn-danger {
+  background: var(--danger);
+  color: white;
+}
+
+.abtn-danger:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+.abtn-secondary {
+  background: var(--secondary);
+  color: white;
+}
+
+.abtn-secondary:hover {
+  background: #475569;
+  transform: translateY(-1px);
+}
+
+/* Status badges */
+.astatus {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.astatus-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.astatus-completed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.astatus-cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Image preview */
+.aimage-preview {
+  width: 200px;
+  height: 200px;
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  background: #f8fafc;
+  transition: border-color 0.2s ease;
+}
+
+.aimage-preview:hover {
+  border-color: var(--primary);
+}
+
+.aimage-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+/* Dropdown for changing the status in actions */
+.abtn-dropdown {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  padding: 0.375rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: #334155;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.abtn-dropdown:hover {
+  background: #e2e8f0;
+}
+
+/* Status styling */
+.astatus {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.astatus-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.astatus-completed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.astatus-shipped {
+  background: #e0f7fa;
+  color: #00796b;
+}
+
+.astatus-out-of-delivery {
+  background: #fff3e0;
+  color: #e65100;
+}
+/* Positioning the Add button fixed at the bottom */
+.add-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff; /* You can change the background color */
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 50px; /* Make it circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #0056b3; /* Darken on hover */
+}
+
+.add-btn svg {
+  margin-right: 8px; /* Space between icon and text */
+}
